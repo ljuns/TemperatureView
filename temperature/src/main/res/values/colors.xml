@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#3F51B5</color>
+    <color name="colorPrimaryDark">#303F9F</color>
+    <color name="colorAccent">#FF4081</color>
+    <!--指针左半部分颜色-->
+    <color name="leftPointer">#e1dcd6</color>
+    <!--指针右半部分颜色-->
+    <color name="rightPointer">#f4efe9</color>
+    <!--背景颜色-->
+    <color name="temperatureBackground">#FFFAFA</color>
+</resources>
