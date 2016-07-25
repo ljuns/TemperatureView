@@ -2,4 +2,4 @@
 效果图：<br/>
 ![image](https://github.com/ljuns/TemperatureView/blob/master/temperature/source/temp.gif)<br/>
 当然，正常室温变化是没有这么快的，再来张截图：<br/>
-![image]()<br/>
+![image](https://github.com/ljuns/TemperatureView/blob/master/temperature/source/temp_1.png)<br/>
