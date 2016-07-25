@@ -26,4 +26,31 @@ private void drawOutCircle(Canvas canvas) {
   canvas.save();
 }
 ```
-这里没什么好说的，直接画圆
+这里没什么好说的，直接画圆。接下来是第二部分了，进度弧:<br/>
+``` Java
+/**
+ * 进度弧
+ * @param canvas
+ */
+private void drawProgress(Canvas canvas) {
+  // dp2px(10):留一点位置（可有可无）
+  progressRadius = mSize /2 - dp2px(10);
+  canvas.save();
+  RectF rectF = new RectF(-progressRadius, -progressRadius, progressRadius, progressRadius);
+  // 设置为圆角
+  progressPaint.setStrokeCap(Paint.Cap.ROUND);
+  progressPaint.setColor(Color.GREEN);
+  // 从150度位置开始，经过120度
+  canvas.drawArc(rectF, 150, 120, false, progressPaint);
+  progressPaint.setColor(Color.RED);
+  progressPaint.setStrokeCap(Paint.Cap.ROUND);
+  canvas.drawArc(rectF, 330, 60, false, progressPaint);
+  progressPaint.setColor(Color.YELLOW);
+  progressPaint.setStrokeCap(Paint.Cap.BUTT);
+  canvas.drawArc(rectF, 270, 60, false, progressPaint);
+  canvas.restore();
+}
+```
+整个进度从150度到30度，一共是240度，分为40份，所以刚好每份是6度。这部分也很简单，至于角度，自己在纸上画画算算就会瞬间明了<br/>
+Paint.Cap.ROUND：用来设置 Paint 为圆角，因为进度的头尾两端个人觉得圆角好看点<br/>
+
